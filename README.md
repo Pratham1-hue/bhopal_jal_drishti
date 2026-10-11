@@ -1,4 +1,4 @@
-﻿# Bhopal Jal Drishti | भोपाल जल दृष्टि
+# Bhopal Jal Drishti | भोपाल जल दृष्टि
 
 _Durga visarjan decision-support for Bhopal Municipal Corporation_
 
@@ -98,6 +98,8 @@ Built for an officer standing at a ghat in direct sunlight, with weak signal, as
 | ![Mobile dashboard](docs/screenshots/mobile-dashboard.png) | ![Mobile ghat card](docs/screenshots/mobile-card.png) | ![Mobile Hindi](docs/screenshots/mobile-hindi.png) |
 
 ## Demo
+
+**Live app:** https://bhopal-jal-drishti.onrender.com _(free plan — first load after idle can take ~50 s)_
 
 The 2-minute screen recording is submitted through the event's Google Form.
 
