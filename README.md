@@ -15,7 +15,8 @@ The **Bhopal Municipal Corporation (BMC) officer who plans Durga visarjan** (Tue
 1. **Ranks the 7 Bhopal immersion ghats** (1 = highest risk) using 3 years (2023–2025) of MPPCB test readings compared with **CPCB Class B (outdoor bathing)** limits. Each rank has a plain-words reason, e.g. _"Oxygen in the water fell to 0 mg/l in 4 tests (2023 & 2025) — fish cannot live in it."_
 2. **Tells the officer what to do.** The **Action plan** turns the readings into the decision the problem statement describes — which of the 3 teams to send where — with the rule and the PDF page behind every suggestion.
 3. **Shows the receipts.** Every number is shown exactly as printed, with a **Verify** link that opens the MPPCB PDF at that page. **Missing data is never shown as clean.**
-4. **Writes forwardable briefs in Hindi and English** for three audiences (BMC team, Police, Public), with Copy, WhatsApp and SMS buttons. Claude writes them when an API key is set; a guardrail rejects any health claim, and a verified template is used offline or if a draft fails the checks.
+4. **Mobile-first and fully bilingual** — designed for a phone at the ghat first, and switchable between English and हिन्दी in one tap ([details](#mobile-first-and-accessible)).
+5. **Writes forwardable briefs in Hindi and English** for three audiences (BMC team, Police, Public), with Copy, WhatsApp and SMS buttons. Claude writes them when an API key is set; a guardrail rejects any health claim, and a verified template is used offline or if a draft fails the checks.
 
 ### Resource allocation engine (Action plan)
 
@@ -47,7 +48,26 @@ Current result: **oxygen pumps → 6 ghats (5 urgent) · cleaning staff → 7 ·
 | **Write brief** | Audience (BMC team · Police · Public) → ghat → ghat manager → what's wrong → your note → language → write. Editable; "Ask Claude to change it" refines the draft. |
 | **Alerts** | Countdown, oxygen-zero ghats, missing data, urgent tasks not assigned. |
 
-Desktop: sidebar + top tabs. Phone: header + bottom bar + "More" sheet. English ↔ हिन्दी everywhere, in plain words.
+### Mobile-first and accessible
+
+Built for an officer standing at a ghat in direct sunlight, with weak signal, as much as for a desk.
+
+| Feature | What it means for the officer |
+|---|---|
+| **Mobile-first layout** | On a phone: sticky header, bottom bar (Ghats · Plan · Map · Brief · More), detail panels that slide up from the bottom, one-column cards. On desktop the same app becomes a sidebar + top tabs + 2-column dashboard. |
+| **Big touch targets** | Every button and link is at least 48 × 48 px — usable with one thumb, on the move. |
+| **Readable in sunlight** | Solid, high-contrast status colours (text contrast ≥ 4.5:1, WCAG 2.1 AA). Status is always icon + word + colour, never colour alone. |
+| **Works with weak signal** | The last ranking and ghat details are saved on the phone and shown offline, with an "Offline — data saved at …" note. Briefs work without internet or an API key. |
+| **Screen readers & keyboard** | ARIA labels on cards, badges, charts and map pins; a list beside the map as a non-visual alternative; skip link; full keyboard use; Escape closes panels; visible focus ring. |
+| **Reduced motion** | Animations switch off if the phone is set to "reduce motion". |
+
+### Language accessibility — English ↔ हिन्दी
+
+- **One tap switches the whole app** between English and Hindi — every page, card, chart label, alert and data problem, not just the menu. The choice is remembered.
+- **Plain words, not jargon:** "Oxygen in water (DO)", "Waste load (BOD)", "Failed bathing limit", "Missing data — do not assume clean". In Hindi: "पानी में ऑक्सीजन", "गंदगी (BOD)", "ज़्यादा खतरा", "डेटा नहीं — इसे साफ़ न मानें".
+- **Natural Hindi**, written for an officer, not word-for-word translation; numbers, units (mg/l) and short names (DO, BOD, pH) stay in Latin script so they match the reports.
+- **Proper Devanagari fonts** (Noto Sans Devanagari) bundled in the app, so Hindi renders correctly even offline.
+- **Every brief comes in both languages** (English, हिन्दी, or both together) — ready to forward on WhatsApp or SMS to staff, police and the public.
 
 ## Demo
 
