@@ -6,6 +6,8 @@ _Durga visarjan decision-support for Bhopal Municipal Corporation_
 **Team:** Solo build — Pratham
 **License:** MIT (see [`LICENSE`](LICENSE))
 
+![Bhopal Jal Drishti dashboard](docs/screenshots/dashboard.png)
+
 ## The user
 
 The **Bhopal Municipal Corporation (BMC) officer who plans Durga visarjan** (Tuesday, 20 October 2026). They use it on a phone or a desktop in the days before the festival to decide **where to send oxygen pumps (aeration), extra cleaning staff and water testing**.
@@ -68,6 +70,32 @@ Built for an officer standing at a ghat in direct sunlight, with weak signal, as
 - **Natural Hindi**, written for an officer, not word-for-word translation; numbers, units (mg/l) and short names (DO, BOD, pH) stay in Latin script so they match the reports.
 - **Proper Devanagari fonts** (Noto Sans Devanagari) bundled in the app, so Hindi renders correctly even offline.
 - **Every brief comes in both languages** (English, हिन्दी, or both together) — ready to forward on WhatsApp or SMS to staff, police and the public.
+
+## Screenshots
+
+**Action plan** — where to send oxygen pumps, cleaning staff and testing, with the rule and PDF page behind each suggestion
+![Action plan](docs/screenshots/action-plan.png)
+
+**Map** — ghats coloured by risk; dashed ring = approximate location
+![Map](docs/screenshots/map.png)
+
+**Ghat details** — NGT banner, nearest permitted sites (divert-to), why this rank
+![Ghat details with NGT and divert-to](docs/screenshots/ghat-details-ngt.png)
+
+**The receipts** — every reading exactly as printed, each linked to its MPPCB report page; missing shown as missing
+![Numbers with page citations](docs/screenshots/receipts.png)
+
+**CPCB check** — which use the water is actually fit for (classes A–E)
+![CPCB class matrix](docs/screenshots/cpcb-matrix.png)
+
+**Write brief (Police)** — written by Claude, checked for health claims, ready for WhatsApp
+![Police brief by Claude](docs/screenshots/brief-police.png)
+
+**Mobile-first, English ↔ हिन्दी**
+
+| Phone · English | Phone · ghat card | Phone · हिन्दी |
+|---|---|---|
+| ![Mobile dashboard](docs/screenshots/mobile-dashboard.png) | ![Mobile ghat card](docs/screenshots/mobile-card.png) | ![Mobile Hindi](docs/screenshots/mobile-hindi.png) |
 
 ## Demo
 
