@@ -1,0 +1,8 @@
+site_id,lat,lon,precision,located_by,source
+bairagarh,23.2744574,77.3365630,area,Bairagarh suburb (Sant Hirdaram Nagar),OpenStreetMap Nominatim
+khatlapura,23.2485183,77.4044513,lake,Lower Lake (exact ghat not in OpenStreetMap),OpenStreetMap Nominatim
+prempura,23.2175449,77.3752714,exact,prempura ghat,OpenStreetMap
+rani-kamlapati,23.2509164,77.3978449,landmark,Rani Kamlapati Mahal (Kamla Park area),OpenStreetMap
+hathaikheda,,,unknown,Not found in OpenStreetMap - add coordinates here,
+malikhedi,23.2013151,77.3086928,area,Malikheri village,OpenStreetMap
+shahpura,23.2066574,77.4212385,lake,Shahpura Lake,OpenStreetMap Nominatim

@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+    -webkit-tap-highlight-color: transparent;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  body {
+    @apply bg-canvas text-ink antialiased;
+  }
+  :lang(hi) body {
+    line-height: 1.65;
+  }
+  h1, h2, h3 {
+    letter-spacing: -0.015em;
+  }
+  *:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+    border-radius: 10px;
+  }
+  ::selection {
+    background: #fed7aa;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-stone-200/90 bg-white shadow-card;
+  }
+  .btn {
+    @apply inline-flex min-h-touch min-w-touch items-center justify-center gap-2 rounded-xl px-4 text-[15px] font-semibold transition duration-150 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-orange-800 text-white shadow-sm hover:bg-orange-900;
+  }
+  .btn-dark {
+    @apply btn bg-ink text-white shadow-sm hover:bg-stone-800;
+  }
+  .btn-brand {
+    @apply btn bg-orange-700 text-white shadow-sm hover:bg-orange-800;
+  }
+  .btn-secondary,
+  .btn-outline {
+    @apply btn border border-stone-300 bg-white text-ink shadow-sm hover:border-stone-400 hover:bg-stone-50;
+  }
+  .btn-ghost {
+    @apply btn text-ink-soft hover:bg-stone-100;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold ring-1 ring-inset;
+  }
+  .input {
+    @apply min-h-touch w-full rounded-xl border border-stone-300 bg-white px-3 text-base text-ink shadow-sm placeholder:text-stone-500 hover:border-stone-400 focus:border-stone-900 focus:outline-none focus:ring-2 focus:ring-stone-900/10;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-wider text-ink-muted;
+  }
+  .page-title {
+    @apply text-2xl font-bold tracking-tight lg:text-[28px];
+  }
+  .page-sub {
+    @apply mt-1 max-w-3xl text-[15px] text-ink-muted;
+  }
+  .seg {
+    @apply inline-flex rounded-xl bg-stone-100 p-1;
+  }
+  .seg-btn {
+    @apply min-h-[40px] rounded-lg px-3.5 text-sm font-semibold text-ink-soft transition hover:text-ink;
+  }
+  .seg-btn[aria-selected='true'],
+  .seg-btn[aria-pressed='true'] {
+    @apply bg-white text-ink shadow-sm;
+  }
+  .seg-btn[aria-current='page'] {
+    @apply bg-orange-900 text-white shadow-sm;
+  }
+  /* dark stripes: "no data" tiles and badges (white text on top) */
+  .stripes-grey {
+    background-color: #4b5563;
+    background-image: repeating-linear-gradient(135deg, #4b5563 0 8px, #374151 8px 16px);
+  }
+  /* light stripes: "no data" chips and boxes (dark text on top) */
+  .stripes-light {
+    background-color: #f5f5f4;
+    background-image: repeating-linear-gradient(135deg, rgba(87, 83, 78, 0.12) 0 6px, transparent 6px 12px);
+  }
+  .tricolor {
+    background: linear-gradient(90deg, #ff9933 0 33.33%, #ffffff 33.33% 66.66%, #138808 66.66% 100%);
+  }
+  .stripes-grey-soft {
+    background-color: #fafaf9;
+    background-image: repeating-linear-gradient(135deg, rgba(87, 83, 78, 0.08) 0 6px, transparent 6px 12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
